@@ -26,8 +26,7 @@ function initChangeTime(){
         <span>Change time offset</span>
     </div>
     <div id="timeSelectorBody" class="card-body p-0 show table-responsive">
-    <label for="time-adjust">Offset <label>
-    <input id="time-adjust" type="checkbox" style="position: relative;top: 2px;">
+    <label for="time-adjust">Offset <input id="time-adjust" type="checkbox" style="position: relative;top: 2px;"></label>
     <input id="timeToChange" class="outline-dark form-control form-control-number" type="number" value="`+parseInt(time)+`" min="0" max="24" /></div>`;
     document.getElementById("pokeballSelector").after(timeChangerHTML);
     document.getElementById('time-adjust').addEventListener('click', event => changeAdjust(event.target));
