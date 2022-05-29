@@ -56,9 +56,12 @@ function initChangeTime(){
     function adjustTime() {
         if(timeAdjuster == "true"){
             Date.prototype.getHours = function(){
-                console.log(new Date().basicGetHours() + time);
                 return (new Date().basicGetHours() + time) % 24;
             };
+            var background = Settings.getSetting("backgroundImage");
+            Settings.getSetting("backgroundImage").set("background-night");
+            Settings.getSetting("backgroundImage").set("background-dynamic");
+            Settings.getSetting("backgroundImage").set(background);
         } else {
             Date.prototype.getHours = Date.prototype.basicGetHours;
         }
